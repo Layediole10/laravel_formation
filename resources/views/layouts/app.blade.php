@@ -11,5 +11,8 @@
     @include('includes/navbar')
     @yield('content')
     @include('includes/footer')
+
+
+    <script src="{{ asset('js/test.js') }}"></script>
 </body>
 </html>

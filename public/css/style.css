@@ -1,6 +1,7 @@
 body{
     margin: 0;
     background-color: #000;
+    /* color: #FFFFFF; */
 }
 /* -----------------NAVBAR------------------- */
 header{
@@ -125,4 +126,16 @@ footer{
 span{
     color: #768797;
     text-decoration: underline;
+}
+
+/* ----------------ABOUT PAGE-------------- */
+
+.title-about{
+    color: #FFFFFF;
+}
+
+/* ---------------CONTACT PAGE------------------- */
+
+.title-contact{
+    color: #FFFFFF;
 }

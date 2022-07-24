@@ -4,6 +4,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 
@@ -24,7 +25,8 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', 'App\Http\Controllers\NextController@index');
 // second methode
-Route::get('/', [HomeController::class, 'homePage']);
-Route::get('/about', [HomeController::class, 'aboutPage']);
-Route::get('/contact', [HomeController::class, 'contactPage']);
+Route::get('/', [HomeController::class, 'homePage'])->name('welcome');
+Route::get('/about', [HomeController::class, 'aboutPage'])->name('about');
+Route::get('/contact', [HomeController::class, 'contactPage'])->name('contact');
 Route::get('/display/{id}', [HomeController::class, 'useId']);
+Route::get('/addElem', [HomeController::class, 'addElement']);

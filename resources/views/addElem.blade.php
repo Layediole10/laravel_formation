@@ -1,4 +1,4 @@
 @extends('layouts/app')
 @section('content')
-    <h2 class="title-about">{{$title}}</h2>
+    <h4>{{$message}}</h4>
 @endsection

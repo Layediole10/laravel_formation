@@ -12,7 +12,7 @@
             <h1>Eat healthy, live happy, and grow a better relationship</h1>
             <p class="para1-main">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit consectetur at minus saepe modi error. Aliquid asperiores eum laborum aut esse architecto tempore facere corporis. Hic incidunt deleniti molestias quos!</p>
             <p class="para2-main">Image from <span>Freepik</span></p>
-            <button>Read More</button>
+            <button class="btn">Read More</button>
         </div>
     </main>
     

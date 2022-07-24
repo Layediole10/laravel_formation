@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
  
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 
- 
 class HomeController extends Controller
 {
  
@@ -41,4 +41,15 @@ class HomeController extends Controller
         $how = $shows[$id];
         return view('display')->with('show',$shows[$id]);
     } 
+
+    public function addElement()
+    {
+        $message = 'ajout avec succès!';
+        $art = new Article();
+        $art->title = 'mon titre';
+        $art->description = 'ceci est ma premiere description';
+        $art->save();
+        return view('addElem', compact('message'));
+
+    }
 }
