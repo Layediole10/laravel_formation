@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
  
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -42,14 +43,45 @@ class HomeController extends Controller
         return view('display')->with('show',$shows[$id]);
     } 
 
-    public function addElement()
-    {
-        $message = 'ajout avec succès!';
-        $art = new Article();
-        $art->title = 'mon titre';
-        $art->description = 'ceci est ma premiere description';
-        $art->save();
-        return view('addElem', compact('message'));
+    // public function addElement(Request $request)
+    // {
+    //     $message = 'ajout avec succès!';
+    //     $art = new Article();
+    //     $art->title = $request->title;
+    //     $art->description = $request->content;
+    //     $art->save();
+    //     return view('addElem', compact('message'));
 
-    }
+    // }
+
+    public function index()
+    {
+        $item = Article::all();
+        
+        return view("article", ['item' => $item]);
+    } 
+
+    public function create()
+    {
+        return view("form");
+    } 
+
+    public function store(Request $request)
+    {
+        // $art = new Article();
+        // $alert = "ajout avec succès!";
+        // $art->title = $request->title;
+        // $art->description = $request->description;
+        // $art->save();
+
+        $alert = "ajout avec succès!";
+        Article::create([
+
+            "title" => $request->title,
+            "description" => $request->description
+        ]);
+      
+        return view("adding", compact("alert"));
+    } 
+
 }

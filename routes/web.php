@@ -28,5 +28,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'homePage'])->name('welcome');
 Route::get('/about', [HomeController::class, 'aboutPage'])->name('about');
 Route::get('/contact', [HomeController::class, 'contactPage'])->name('contact');
+Route::get('/display/form', [HomeController::class, 'create'])->name('add');
+Route::post('/display/form', [HomeController::class, 'store'])->name('addItem');
 Route::get('/display/{id}', [HomeController::class, 'useId']);
 Route::get('/addElem', [HomeController::class, 'addElement']);
+
+Route::get('/article', [HomeController::class, 'index']);
